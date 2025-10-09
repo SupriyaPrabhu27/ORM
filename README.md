@@ -51,7 +51,8 @@ class EmployeeAdmin(admin.ModelAdmin):
 
 ## OUTPUT
 
-(image-1.png)
+<img width="1595" height="911" alt="image" src="https://github.com/user-attachments/assets/f3f6f97f-eb0f-4169-8182-497dfee97b17" />
+
 
 
 
