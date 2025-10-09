@@ -23,25 +23,35 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
-~~~
+```
+admin.py
+
+from django.contrib import admin
+from .models import Employee,EmployeeAdmin
+admin.site.register(Employee,EmployeeAdmin)
+```
+```
+model.py
+from django.db import models
 from django.db import models
 from django.contrib import admin
-class Movies(models.Model):
-    M_ID=models.IntegerField(primary_key=True)
-    M_name=models.CharField(max_length=100)
-    Release_date=models.DateField()
-    Director=models.CharField(max_length=100)
-    Actors=models.CharField(max_length=100)
 
-class MoviesAdmin(admin.ModelAdmin):
-    list_display=('M_ID', 'M_name', 'Release_date', 'Director', 'Actors')
-~~~
+class Employee(models.Model):
+    eid = models.CharField(max_length=20, help_text="Employee ID")
+    name = models.CharField(max_length=100)
+    salary = models.IntegerField()
+    age = models.IntegerField()
+    email = models.EmailField()
+
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display = ('eid', 'name', 'salary', 'age', 'email')
+
+```
 
 
 ## OUTPUT
 
-<img width="1448" height="742" alt="image" src="https://github.com/user-attachments/assets/2cdaaec8-b08d-4e19-b35b-036799bebeef" />
-
+(image-1.png)
 
 
 
